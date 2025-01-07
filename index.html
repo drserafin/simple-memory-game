@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="game-container">
+    <h1>Memory Game</h1>
+    <div id="game-board"></div>
+    <!-- Cards will dynamically be created here -->
+    <!-- Wrapper around each card will be named "card-inner" -->
+    <!-- Each card will have a card-front and card-back inside card-inner -->
+    <button id="reset-button">Reset Game</button>
+  </div>
+
+  <!-- Leaderboard Container -->
+  <div id="leaderboard">
+    <h2>Leaderboard</h2>
+    <ol>
+      <li>Player 1: <span id="player1Score">0</span> points</li>
+      <li>Player 2: <span id="player2Score">0</span> points</li>
+    </ol>
+  </div>
+
+  <h3 id="turnIndicator">Player 1's turn</h3>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
