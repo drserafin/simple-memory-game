@@ -162,9 +162,6 @@ function cardsMatched(flippedCards) {
     } else {
       // If cards don't match, switch player and reset
       switchPlayer();
-      setTimeout(() => {
-        resetFlippedCards(); // Reset flipped cards
-      }, 1000); // 1 second delay before resetting
     }
   }
 }

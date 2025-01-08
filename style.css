@@ -8,6 +8,7 @@ body {
 	display: flex;
 	height: 100vh;
 	justify-content: center;
+	background-color: rgb(71, 71, 71);
 }
 
 h1 {
@@ -102,9 +103,8 @@ button {
 
 #leaderboard {
 	position: fixed;
-	border: 2px solid white;
-	background-color: rgb(52, 52, 52);
-	width: 30;
+	border: 2px solid rgb(0, 0, 0);
+	background-color: rgb(117, 255, 214);
 	max-width: 300px;
 	height: auto;
 	top: 10px;
@@ -121,6 +121,6 @@ button {
 
 #turnIndicator {
 	font-size: 24px;
-	color: white;
+	color: rgb(255, 255, 255);
 	margin-top: 20px;
 }
