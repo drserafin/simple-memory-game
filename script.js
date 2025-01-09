@@ -91,18 +91,18 @@ function addBackFacesToCards(cards) {
   });
 }
 
-// Function to handle card flipping and reset after two flips
+
 function addFlipListeners(cards) {
   console.log("Cards array:", cards);
-  const flippedCards = []; // Array to track flipped cards
+  const flippedCards = []; 
 
   // Helper function to flip a card
   function flipCard(cardInner) {
     cardInner.classList.add("flipped");
-    flippedCards.push(cardInner); // Add the flipped card to the array
+    flippedCards.push(cardInner); 
   }
 
-  // Helper function to reset flipped cards
+  
   function resetFlippedCards() {
     flippedCards.forEach((flippedCard) => {
       flippedCard.classList.remove("flipped"); // Reset each card
@@ -110,26 +110,26 @@ function addFlipListeners(cards) {
     flippedCards.length = 0; // Clear the flipped cards array
   }
 
-  // Function to handle card click event
+
   function handleCardClick(card) {
     const cardInner = card.querySelector(".card-inner");
 
-    // If the card is already flipped or we already have 2 flipped cards, do nothing
+  
     if (cardInner.classList.contains("flipped") || flippedCards.length >= 2)
       return;
 
-    flipCard(cardInner); // Flip the card
+    flipCard(cardInner); 
 
-    // If two cards are flipped, check for a match after a delay
+ 
     if (flippedCards.length === 2) {
       setTimeout(() => {
-        cardsMatched(flippedCards); // Check if the cards match
-        resetFlippedCards(); // Reset after checking
-      }, 1000); // 1-second delay before checking
+        cardsMatched(flippedCards); 
+        resetFlippedCards();
+      }, 1000);
     }
   }
 
-  // Add click event listeners to all cards
+
   cards.forEach((card) => {
     card.addEventListener("click", () => handleCardClick(card));
   });
